@@ -8,5 +8,10 @@
         "sourceMap": true,
         "outDir": "dist",
         "declaration": true
-    }
+    },
+    "exclude": [
+        "index.d.ts",
+        "node_modules",
+        "dist"
+    ]
 }
