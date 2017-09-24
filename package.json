@@ -16,5 +16,9 @@
   "devDependencies": {
     "@types/node": "^8.0.24",
     "typescript": "^2.4.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 130
   }
 }
