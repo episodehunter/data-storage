@@ -11,6 +11,7 @@ function connect({ host, port, username, password, database }): Promise<Connecti
       username,
       password,
       database,
+      usePool: false, // We will be using the connection inside a lambda function which only lives for a few seconds
       extra: {
         ssl: 'Amazon RDS'
       }
