@@ -1,17 +1,20 @@
 {
   "name": "@episodehunter/datastore",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "main": "dist/index.js",
   "scripts": {
     "prepare": "tsc"
   },
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/episodehunter/data-storage.git"
+  },
   "author": "Oskar Karlsson <kontakta@oskarkarlsson.nu>",
   "license": "MIT",
   "dependencies": {
     "mysql": "^2.13.0",
     "reflect-metadata": "^0.1.10",
-    "typeorm": "^0.0.11"
+    "typeorm": "^0.1.1"
   },
   "devDependencies": {
     "@types/node": "^8.0.24",

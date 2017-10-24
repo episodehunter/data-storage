@@ -7,9 +7,9 @@ export class ImagesToDownload {
   @Column('int', { length: 10 })
   media_id: number;
 
-  @Column('string', { length: 11 })
+  @Column('varchar', { length: 11 })
   type: string;
 
-  @Column('string', { length: 255 })
+  @Column('varchar', { length: 255 })
   path: string;
 }

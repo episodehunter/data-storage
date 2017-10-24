@@ -13,7 +13,7 @@ export class Episode {
   @Column('int', { length: 11 })
   serie_id: number;
 
-  @Column('string', { length: 255 })
+  @Column('varchar', { length: 255 })
   name: string;
 
   @Column('int', { length: 2 })
@@ -22,12 +22,12 @@ export class Episode {
   @Column('int', { length: 3 })
   episode: number;
 
-  @Column('string', { length: 10 })
+  @Column('varchar', { length: 10 })
   first_aired: string;
 
   @Column('text') overview: string;
 
-  @Column('string', { length: 50 })
+  @Column('varchar', { length: 50 })
   image: string;
 
   @Column('int', { length: 10 })

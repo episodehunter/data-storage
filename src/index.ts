@@ -1,24 +1,22 @@
 import 'reflect-metadata';
-import { createConnection, getEntityManager, Connection } from 'typeorm';
+import { createConnection, Connection } from 'typeorm';
 import * as entities from './entity';
 
 function connect({ host, port, username, password, database }): Promise<Connection> {
   return createConnection({
-    driver: {
-      type: 'mysql',
-      host,
-      port,
-      username,
-      password,
-      database,
-      usePool: false, // We will be using the connection inside a lambda function which only lives for a few seconds
-      extra: {
-        ssl: 'Amazon RDS'
-      }
+    type: 'mysql',
+    host,
+    port,
+    username,
+    password,
+    database,
+    ssl: 'Amazon RDS',
+    pool: {
+      max: 1
     },
     entities: [__dirname + '/entity/*.js'],
-    autoSchemaSync: false
+    synchronize: false
   });
 }
 
-export { connect, entities, getEntityManager, Connection };
+export { connect, entities, Connection };

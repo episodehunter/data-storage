@@ -4,9 +4,9 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 export class SystemInfo {
   @PrimaryGeneratedColumn() id: number;
 
-  @Column('string', { length: 11 })
+  @Column('varchar', { length: 11 })
   key: string;
 
-  @Column('string', { length: 255 })
+  @Column('varchar', { length: 255 })
   value: string;
 }
