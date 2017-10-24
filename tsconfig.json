@@ -1,17 +1,15 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "target": "es6",
-        "noImplicitAny": false,
-        "sourceMap": true,
-        "outDir": "dist",
-        "declaration": true
-    },
-    "exclude": [
-        "index.d.ts",
-        "node_modules",
-        "dist"
-    ]
+  "compilerOptions": {
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "outDir": "dist",
+    "declaration": true,
+    "allowUnusedLabels": false,
+    "strict": true
+  },
+  "exclude": ["index.d.ts", "node_modules", "dist"]
 }

@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('images_download')
-export class imagesToDownload {
+export class ImagesToDownload {
   @PrimaryGeneratedColumn() id: number;
 
   @Column('int', { length: 10 })
