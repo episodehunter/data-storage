@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import { createConnection, Connection } from 'typeorm';
 import * as entities from './entity';
 
-function connect({ host, port, username, password, database }): Promise<Connection> {
+function connect({ host, port, username, password, database, ssl = 'Amazon RDS' }): Promise<Connection> {
   return createConnection({
     type: 'mysql',
     host,
@@ -10,7 +10,7 @@ function connect({ host, port, username, password, database }): Promise<Connecti
     username,
     password,
     database,
-    ssl: 'Amazon RDS',
+    ssl: ssl ? ssl : undefined,
     pool: {
       max: 1
     },
